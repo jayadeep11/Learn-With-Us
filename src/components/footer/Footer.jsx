@@ -13,8 +13,7 @@ const Footer = () => {
         <div className="flex flex-col space-y-6">
           <div className="flex items-center space-x-6">
             {/* Replace with your logo */}
-            <img src={logo} alt="Logo" className="w-10 h-10" />
-            <span className="text-lg font-semibold">Loop</span>
+            <span className="text-lg font-semibold arch">Learn with us</span>
           </div>
           <div className="flex space-x-6 text-2xl">
             <FaGithub />
@@ -46,7 +45,7 @@ const Footer = () => {
             <h3 className="text-sm font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
               <li><a href="#" className="hover:underline">API Docs</a></li>
-              <li><a href="#" className="hover:underline">Guides</a></li>
+              <li><a href="#" classNan With me="hover:underline">Guides</a></li>
               <li><a href="#" className="hover:underline">Blog</a></li>
               <li><a href="#" className="hover:underline">Release Notes</a></li>
             </ul>
@@ -63,7 +62,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="mt-12 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-around items-center px-6 md:px-12">
-        <p className="text-sm">Loop@2024 </p>
+        <p className="text-sm">Learn@2024 </p>
       </div>
     </footer>
   );

@@ -27,7 +27,7 @@ const Title = () => {
         Hello, Nerds!
       </h1>
       <p className="mt-5 text-3xl md:text-3xl lg:text-3xl text-[#D4EDE4]">
-        Welcome to the Loop
+        Welcome
       </p>
       <style jsx>{`
         @keyframes gradient-animation {
