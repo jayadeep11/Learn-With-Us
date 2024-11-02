@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const NavItem = ({ icon, name, path }) => {
+const NavItem = ({ name, path }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -14,10 +14,10 @@ const NavItem = ({ icon, name, path }) => {
 
   return (
     <div className="flex items-center cursor-pointer p-2 rounded-md" onClick={handleClick}>
-      <span className="text-2xl">{icon}</span>
-      <span className="ml-2">{name}</span>
+      <span>{name}</span>
     </div>
   );
 };
 
 export default NavItem;
+

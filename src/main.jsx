@@ -1,22 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
-import Login from './components/Login';
-import Register from './components/Register.jsx';
-import Users from './components/Users';
 import Layout from './components/Layout';
-import Settings from './components/Settings';
 import Arch from './components/Arch/Arch';
-import Notes from './components/Notes';
-import GetStarted from './components/GetStarted.jsx';
 import DrawBoard from './components/Draw/DrawBoard';
-import Profile from './components/UserProfile.jsx';
 import Neovim from './components/Neovim/Neovim';
 import ProblemList from './components/Problems/Problem-pages/ProblemList';
-import Installation from './components/Neovim/installation';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { NotificationProvider } from './components/NotificationContext.jsx';
+import { NotificationProvider } from './components/Notifications/NotificationContext.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,42 +20,12 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "register",
-        element: <Register />,
-      },
-      {
-        path: "users",
-        element: <Users />,
-      },
-      {
-        path: "settings",
-        element: <Settings />,
-      },
-      {
         path: "Arch",
         element: <Arch />,
       },
       {
         path: "Neovim",
         element: <Neovim />,
-        children: [
-          {
-            path: "installation",
-            element: <Installation />,
-          },
-        ],
-      },
-      {
-        path: "notes",
-        element: <Notes />,
-      },
-      {
-        path: "get-started",
-        element: <GetStarted />,
       },
       {
         path: "problems",
@@ -72,10 +34,6 @@ const router = createBrowserRouter([
       {
         path: "draw",
         element: <DrawBoard />,
-      },
-      {
-        path: "profile",
-        element: <Profile />,
       },
     ],
   },
