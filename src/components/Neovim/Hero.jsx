@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Hero Title and Description */}
       <div className="flex flex-col items-center text-center">
         <Title />
-        <p className="text-base text-gray-300 lg:text-lg max-w-md lg:max-w-lg">
+        <p className="text-base text-sm text-gray-300 lg:text-lg max-w-md lg:max-w-lg">
           A guide to getting started with Neovim, the powerful text editor
           that's extensible and highly configurable.
         </p>
