@@ -31,7 +31,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Arch', path: '/arch' },
     { name: 'Neovim', path: '/neovim' },
-    { name: 'Problems', path: '/problems' },
     { name: 'GitHub', path: 'https://github.com/jayadeep11/learn-with-us' },
   ];
 
