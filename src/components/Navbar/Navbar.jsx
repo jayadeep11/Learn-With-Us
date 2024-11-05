@@ -35,7 +35,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`border-zinc-900 border-b text-gray-300 p-4 px-5 shadow-lg flex justify-between items-center transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'} fixed left-0 top-0 w-full z-10`}>
+    <nav className={`border-zinc-900  px-32 border-b text-gray-300 p-4 px-5 shadow-lg flex justify-between items-center transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'} fixed left-0 top-0 w-full z-10`}>
       <div className="text-2xl w-52 font-bold arch">
         <h1 className="text-3xl font-bold ">Learn With Us</h1>
       </div>

@@ -15,13 +15,13 @@ export const cardContents = [
   {
     title: 'Neovim',
     description: 'A guide to getting started with Neovim, the powerful text editor that\'s extensible and highly configurable.',
-    link: '#',
+    link: '/Neovim',
     linkText: 'Discover More',
     image: vim, // Replace with actual image path
     imagePosition: 'right'
   },
   {
-    title: 'Problems',
+    title: 'Docker',
     description: 'This is the description or content of the third card. It highlights key aspects and functionality.',
     link: '#',
     linkText: 'Explore',
