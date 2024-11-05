@@ -1,3 +1,5 @@
+// src/components/Arch.js
+import React from 'react';
 import Hero from './Hero';
 
 const Arch = () => {
@@ -9,3 +11,4 @@ const Arch = () => {
 };
 
 export default Arch;
+

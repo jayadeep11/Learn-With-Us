@@ -1,5 +1,5 @@
 import arch from "./asserts/arch.jpg";
-import vim from "./asserts/Vim-Features.gif";
+import vim from "./asserts/vim.png";
 
 
 // constants.js
