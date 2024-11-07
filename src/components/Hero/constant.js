@@ -32,7 +32,7 @@ export const cardContents = [
   {
     title: 'Docker',
     description: 'This is the description or content of the third card. It highlights key aspects and functionality.',
-    link: '#',
+    link: '#link',
     linkText: 'Explore',
     image: arch, // Replace with actual image path
     imagePosition: 'left'
