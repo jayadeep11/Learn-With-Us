@@ -7,7 +7,6 @@ import DrawBoard from "./components/Draw/DrawBoard";
 import Neovim from "./components/Neovim/Neovim";
 import ProblemList from "./components/Problems/Problem-pages/ProblemList";
 import Linux from "./components/Linux/Linux.jsx";
-import Login from "./components/auth/Login.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NotificationProvider } from "./components/Notifications/NotificationContext.jsx";
@@ -28,10 +27,6 @@ const router = createBrowserRouter([
             {
                 path: "Arch",
                 element: <Arch />,
-            },
-            {
-                path: "Login",
-                element: <Login />,
             },
             {
                 path: "Neovim",
