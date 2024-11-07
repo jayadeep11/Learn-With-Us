@@ -2,9 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import Layout from "./components/Layout";
-import Arch from "./components/Arch/Arch";
 import DrawBoard from "./components/Draw/DrawBoard";
-import Neovim from "./components/Neovim/Neovim";
 import ProblemList from "./components/Problems/Problem-pages/ProblemList";
 import Linux from "./components/Linux/Linux.jsx";
 import "./index.css";
@@ -23,14 +21,6 @@ const router = createBrowserRouter([
             {
                 path: "Linux",
                 element: <Linux />,
-            },
-            {
-                path: "Arch",
-                element: <Arch />,
-            },
-            {
-                path: "Neovim",
-                element: <Neovim />,
             },
             {
                 path: "problems",

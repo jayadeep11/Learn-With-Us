@@ -1,6 +1,6 @@
 import React from "react";
 
-const TableOfContents = ({ sections, readStatus, toggleReadStatus, scrollToSection }) => {
+const TableOfContents = ({ sections, readStatus = [], toggleReadStatus, scrollToSection }) => {
   return (
     <aside className="w-1/4 p-4 border-l border-gray-600 sticky top-20 h-screen hidden lg:block">
       <h2 className="text-2xl font-semibold mb-4">Table of Contents</h2>
@@ -16,7 +16,7 @@ const TableOfContents = ({ sections, readStatus, toggleReadStatus, scrollToSecti
 
             <input
               type="checkbox"
-              checked={readStatus[index]}
+              checked={readStatus[index] || false} // Ensure fallback value is false
               onChange={() => toggleReadStatus(index)}
               className="cursor-pointer"
             />

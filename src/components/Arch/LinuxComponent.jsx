@@ -4,11 +4,12 @@ import TableOfContents from "./TableOfContents";
 import ContentSections from "./ContentSections";
 import { db } from "../auth/firebaseConfig";
 import { getAuth } from "firebase/auth";
-import { doc, getDoc, setDoc } from "firebase/firestore"; // Import missing Firestore functions
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
 const LinuxComponent = () => {
-  const [readStatus, setReadStatus] = useState(
-    Array(linuxSections.length).fill(false) // Start with default false status
+  // Ensure readStatusA has a default value that is never undefined
+  const [readStatusA, setReadStatusA] = useState(
+    Array(linuxSections.length).fill(false)
   );
 
   const auth = getAuth();
@@ -19,60 +20,66 @@ const LinuxComponent = () => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        loadProgress(currentUser.uid);  // Load progress from Firestore on login
+        loadProgress(currentUser.uid);
       } else {
         setUser(null);
       }
     });
-
-    return () => unsubscribe(); // Cleanup on unmount
+    return () => unsubscribe();
   }, [auth]);
 
+  // Load user progress from Firestore
   const loadProgress = async (userid) => {
     try {
       const userProgressRef = doc(db, "progress", userid);
       const progressDoc = await getDoc(userProgressRef);
       if (progressDoc.exists()) {
         const progress = progressDoc.data();
-        setReadStatus(progress.linux || Array(linuxSections.length).fill(false));  // Default if not found
+        setReadStatusA(progress.linux || Array(linuxSections.length).fill(false));
+      } else {
+        console.log("No progress found for this user, initializing...");
       }
     } catch (error) {
       console.error("Error loading progress:", error);
     }
   };
 
+  // Save user progress to Firestore
   const saveProgress = async (userId, updatedStatus) => {
     try {
       const userProgressRef = doc(db, "progress", userId);
       await setDoc(userProgressRef, { linux: updatedStatus }, { merge: true });
+      console.log("Progress saved successfully!");
     } catch (error) {
       console.error("Error saving progress:", error);
     }
   };
 
+  // Section refs for scrolling
   const sectionRefs = linuxSections.map(() => useRef(null));
 
+  // Scroll to a section
   const scrollToSection = (index) => {
     sectionRefs[index].current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Toggle read status and save progress
   const toggleReadStatus = (index) => {
-    const updatedStatus = [...readStatus];
+    const updatedStatus = [...readStatusA];
     updatedStatus[index] = !updatedStatus[index];
-    setReadStatus(updatedStatus);
+    setReadStatusA(updatedStatus);
 
     if (user) {
-      saveProgress(user.uid, updatedStatus);  // Save to Firebase
+      saveProgress(user.uid, updatedStatus);
     }
   };
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen text-white">
       <ContentSections sections={linuxSections} sectionRefs={sectionRefs} />
-
       <TableOfContents
         sections={linuxSections}
-        readStatus={readStatus}
+        readStatusA={readStatus || Array(linuxSections.length).fill(false)}
         toggleReadStatus={toggleReadStatus}
         scrollToSection={scrollToSection}
       />

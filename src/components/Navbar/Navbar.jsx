@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import NavItem from './NavItem'; // Assumes NavItem is a component that renders each navigation link
 import { auth } from '../auth/firebaseConfig';
@@ -64,9 +65,9 @@ const Navbar = () => {
 
   const items = [
     { name: 'Home', path: '/' },
-    { name: 'Linux', path: '/linux' },
-    { name: 'Arch', path: '/arch' },
-    { name: 'Neovim', path: '/neovim' },
+    { name: 'Linux', path: 'Linux' },
+    { name: 'Arch', path: '#' },
+    { name: 'Neovim', path: '#' },
   ];
 
   return (
@@ -148,4 +149,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,4 +22,3 @@ const NavItem = ({ name, path }) => {
 };
 
 export default NavItem;
-
