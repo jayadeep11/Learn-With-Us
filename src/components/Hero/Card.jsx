@@ -27,13 +27,13 @@ const Card = ({ image, content, imagePosition = "left" }) => {
         <p className="text-sm md:text-base text-center lg:text-lg text-neutral-400  mb-4">
           {content.description}
         </p>
-        <a
+        <Link
           href={content.link}
           className="bg-neutral-800 text-gray-300
  text-sm md:text-base lg:text-lg px-4 py-2 w-48 arch text-center rounded-3xl hover:bg-gray-100 hover:text-black transition duration-300 ease-in-out"
         >
           {content.linkText || "Read More"}
-        </a>
+        </Link>
       </div>
     </div>
   );

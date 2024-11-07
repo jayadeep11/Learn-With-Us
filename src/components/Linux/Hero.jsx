@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="flex flex-col items-center text-center ">
         <div className="flex flex-col items-center justify-center w-full text-center">
           <h1 className="arch text-7xl md:text-7xl lg:text-[13rem] bg-gradient-to-b from-white to-black bg-clip-text text-transparent transition-all duration-300 ease-in-out">
-            Linux
+            Linux Os
           </h1>
         </div>
         <p className="text-base text-sm text-gray-300 lg:text-lg max-w-md lg:max-w-lg">

@@ -8,7 +8,7 @@ export const cardContents = [
   {
     title: 'Linux',
     description: 'The Linux Operating System is a type of operating system that is similar to Unix, and it is built upon the Linux Kernel.',
-    link: '/Arch',
+    link: '/Linux',
     linkText: 'Learn More',
     image: linux, // Replace with actual image path
     imagePosition: 'right'
