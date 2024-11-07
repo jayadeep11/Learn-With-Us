@@ -29,6 +29,7 @@ const Navbar = () => {
 
   const items = [
     { name: 'Home', path: '/' },
+    { name: 'Linux', path: '/linux' },
     { name: 'Arch', path: '/arch' },
     { name: 'Neovim', path: '/neovim' },
     { name: 'GitHub', path: 'https://github.com/jayadeep11/learn-with-us' },

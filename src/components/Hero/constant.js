@@ -1,9 +1,18 @@
 import arch from "./asserts/arch.jpg";
+import linux from "./asserts/Linux.png";
 import vim from "./asserts/vim.png";
 
 
 // constants.js
 export const cardContents = [
+  {
+    title: 'Linux',
+    description: 'The Linux Operating System is a type of operating system that is similar to Unix, and it is built upon the Linux Kernel.',
+    link: '/Arch',
+    linkText: 'Learn More',
+    image: linux, // Replace with actual image path
+    imagePosition: 'right'
+  },
   {
     title: 'Arch Linux',
     description: 'My cool desktop!! Which is actually just the most efficient way I’ve found to do my work.',

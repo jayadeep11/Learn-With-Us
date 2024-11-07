@@ -6,6 +6,7 @@ import Arch from "./components/Arch/Arch";
 import DrawBoard from "./components/Draw/DrawBoard";
 import Neovim from "./components/Neovim/Neovim";
 import ProblemList from "./components/Problems/Problem-pages/ProblemList";
+import Linux from "./components/Linux/Linux.jsx";
 import Login from "./components/auth/Login.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <App />,
+            },
+            {
+                path: "Linux",
+                element: <Linux />,
             },
             {
                 path: "Arch",

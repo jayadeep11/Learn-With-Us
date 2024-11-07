@@ -10,11 +10,11 @@ const Hero = () => {
       <Title />
       <div className="flex flex-col items-center w-full mt-52 gap-48">
         {cardContents.map((content, index) => (
-          <Card 
+          <Card
             key={index} // Use index as a key (or a unique identifier if available)
-            content={content} 
+            content={content}
             image={content.image || arch} // Fallback to `arch` if image is not defined
-            imagePosition={content.imagePosition} 
+            imagePosition={content.imagePosition}
           />
         ))}
       </div>
@@ -23,4 +23,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
