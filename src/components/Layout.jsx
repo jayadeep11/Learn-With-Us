@@ -1,9 +1,9 @@
-// src/components/Layout.jsx
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Footer from './footer/Footer';
 import { AuthProvider } from './auth/AuthProvider'; // Import AuthProvider
+import CatButton from './Cat/CatButton'; // Import CatButton
 
 const Layout = () => {
   return (
@@ -18,6 +18,8 @@ const Layout = () => {
           <Outlet /> {/* Renders the route’s component */}
           <Footer />
         </div>
+        {/* Cat Button */}
+        <CatButton />
       </div>
     </AuthProvider>
   );

@@ -4,11 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 const Card = ({ image, content, imagePosition = "left" }) => {
   const navigate = useNavigate();
 
-  // Conditional classes to change order based on image position
   const imageFirst =
     imagePosition === "left" ? "md:flex-row" : "md:flex-row-reverse";
 
-  // Handle button click to navigate
   const handleNavigation = () => {
     navigate(content.link);
   };
@@ -17,7 +15,6 @@ const Card = ({ image, content, imagePosition = "left" }) => {
     <div
       className={`flex flex-col ${imageFirst} justify-center items-center bg-[#171717] shadow-lg rounded-xl max-w-auto md:mx-48`}
     >
-      {/* Image side */}
       <div className="md:w-1/2 p-10 bg-gradient-to-b from-neutral-100 to-neutral-800 rounded-lg">
         <img
           src={image}
@@ -26,7 +23,6 @@ const Card = ({ image, content, imagePosition = "left" }) => {
         />
       </div>
 
-      {/* Content side */}
       <div className="md:w-1/2 p-10 flex flex-col gap-3 justify-center items-center text-white">
         <h2 className="acorn text-xl md:text-3xl lg:text-4xl font-bold mb-2">
           {content.title}
